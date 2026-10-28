@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Slik bruker EiendelsBuddy og GoogleAPIApp Google-data, dokumenter og AI-vurdering.">
+  <title>Personvernerklæring – EiendelsBuddy</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="../">EiendelsBuddy</a><nav aria-label="Hovedmeny"><a href="./" aria-current="page">Personvern</a><a href="../vilkar/">Bruksvilkår</a></nav></header>
+  <main>
+    <p class="eyebrow">Sist oppdatert 28. oktober 2026</p>
+    <h1>Personvernerklæring</h1>
+    <p class="lead">Denne erklæringen gjelder EiendelsBuddy og GoogleAPIApp: et selvhostet eiendelsarkiv med Google-tilkobling til personlig bruk.</p>
+
+    <h2>Hvem som administrerer appen</h2>
+    <p>Appen administreres av GitHub-brukeren <a href="https://github.com/smellyglove">smellyglove</a> og brukes med eierens egen Google-konto. Kontakt kan tas gjennom <a href="https://github.com/smellyglove/eiendelsbuddy-info/issues">GitHub</a>. Offentlige henvendelser skal ikke inneholde private dokumenter eller kontoinformasjon.</p>
+
+    <h2>Hvilke Google-data som leses</h2>
+    <ul>
+      <li><strong>Gmail:</strong> meldings- og tråd-ID-er, tidsstempler, avsender, mottaker, emne, meldingsinnhold og vedlegg, blant annet originale kvitterings-PDF-er. Meldinger undersøkes for å avgjøre om de dokumenterer kjøp.</li>
+      <li><strong>Google Drive:</strong> fil- og mappemetadata, eksisterende kvitteringsdokumenter og tidligere arkivlogger eller kontrollpunkter. Filer i en lokalt synkronisert kvitteringsmappe kan også leses.</li>
+      <li><strong>Google Calendar:</strong> kalenderlisten, tilhørende tilgangsinformasjon og hendelser i den konfigurerte kalenderen for kalender- og tilkoblingskontroll.</li>
+    </ul>
+    <p>API-tilkoblingen ber om <code>gmail.readonly</code>, <code>drive.readonly</code>, <code>calendar.calendarlist.readonly</code> og <code>calendar.events.readonly</code>. De gir lesetilgang, uten rett til å sende eller slette meldinger eller endre Google Drive og Google Calendar gjennom API-ene.</p>
+
+    <h2>Hva opplysningene brukes til</h2>
+    <p>Opplysningene brukes til å finne kjøpsdokumentasjon, unngå duplikater, lese kvitteringer og foreslå felter som vare, butikk, kjøpsdato, valuta og kjøpspris. Kalenderdata brukes til kalender- og tilkoblingskontroll. Originaldokumenter og kildebelegg gjør det mulig for eieren å kontrollere forslagene før de tas inn i eiendelsarkivet.</p>
+    <p>Appen bruker ikke Google-data til reklame eller videresalg. Bruken av informasjon mottatt fra Google API-er skal følge <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, inkludert kravene om Limited Use.</p>
+
+    <h2>AI-vurdering og deling</h2>
+    <p>Den valgte vurderingsflyten bruker <strong>ChatGPT fra OpenAI</strong>. Meldingsinnhold, nødvendige meldingsopplysninger og originale PDF-dokumenter klargjøres i kildepakker som ChatGPT leser for å vurdere kjøp og foreslå strukturerte opplysninger. Dette innebærer at innholdet også behandles av OpenAI; denne delen av behandlingen er ikke utelukkende lokal.</p>
+    <p>AI-vurderingen er avgrenset til dokumenttolkning for eierens arkiv. Den foreslåtte informasjonen valideres av den lokale appen. En lokal modell gjennom Ollama er et tilgjengelig alternativ som kan velges i appoppsettet.</p>
+    <p>Appen sender ikke kvitteringer eller e-postinnhold til denne offentlige nettsiden eller til GitHub Pages. Den publiserer ikke Google-data for andre brukere.</p>
+
+    <h2>Lagring og beskyttelse</h2>
+    <p>Appens database, dokumentfiler, AI-kildepakker og vurderingsresultater lagres på eierens datamaskin. Eiendelsarkivet kan sikkerhetskopieres til en mappe valgt av eieren; en slik mappe kan synkroniseres med Google Drive eller en annen tjeneste. Google-originalene forblir i eierens Google-konto. Kilder og svar behandlet i ChatGPT kan også finnes i brukerens ChatGPT-historikk eller arbeidsområde.</p>
+    <p>OAuth-legitimasjon, inkludert fornyelsestoken, oppbevares i macOS Keychain. Privat applikasjonskode, token, database og kvitteringer inngår ikke i dette offentlige informasjonsrepoet.</p>
+
+    <h2>Oppbevaring, sletting og tilbakekalling</h2>
+    <p>Lokale dokumenter og metadata beholdes til eieren sletter dem gjennom appen eller lokal administrasjon. Sikkerhetskopier, kildepakker og eventuell ChatGPT-historikk må håndteres separat. Å slette en eiendel i EiendelsBuddy sletter ikke originalmeldingen i Gmail eller originalfilen i Google Drive.</p>
+    <p>Eieren kan tilbakekalle Google-tilgangen når som helst under <a href="https://myaccount.google.com/connections">tilkoblinger i Google-kontoen</a>. Da kan appen ikke hente nye opplysninger med den tilbakekalte tilgangen. Tilbakekalling sletter ikke allerede lagrede lokale kopier.</p>
+
+    <h2>Denne informasjonssiden</h2>
+    <p>Siden er vertet på GitHub Pages. Den har ingen innlogging, skjemaer, analyseverktøy, sporingsskript eller egne informasjonskapsler. GitHub behandler tekniske besøksopplysninger, blant annet IP-adresse, for drift og sikkerhet etter <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubs personvernerklæring</a>.</p>
+
+    <h2>Endringer</h2>
+    <p>Erklæringen oppdateres når bruken av data eller appens funksjoner endres. Utvidet Google-tilgang krever en ny autorisering fra eieren.</p>
+  </main>
+  <footer><p>EiendelsBuddy · GoogleAPIApp</p><p><a href="../">Forside</a> · <a href="../vilkar/">Bruksvilkår</a></p></footer>
+</body>
+</html>

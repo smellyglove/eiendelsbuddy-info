@@ -1,0 +1,47 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7fb;
+  --card: #fff;
+  --text: #1b1e29;
+  --muted: #5b6377;
+  --border: #dfe3ee;
+  --accent: #166534;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  background: var(--bg);
+  color: var(--text);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #12141b; --card: #1c202a; --text: #e7e9f0; --muted: #a6afc0; --border: #2c3140; --accent: #86efac; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+.site-header, main, footer { max-width: 840px; margin-inline: auto; padding-inline: 24px; }
+.site-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; padding-block: 24px; border-bottom: 1px solid var(--border); }
+.brand { font-weight: 750; font-size: 1.15rem; text-decoration: none; color: var(--text); }
+nav { display: flex; flex-wrap: wrap; gap: 20px; font-size: .95rem; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; }
+nav a[aria-current] { font-weight: 700; }
+main { padding-block: 52px 64px; }
+.eyebrow { font-size: .85rem; font-weight: 650; color: var(--accent); margin-block: 0 12px; }
+h1 { font-size: clamp(2rem, 6vw, 3.35rem); line-height: 1.15; letter-spacing: -.04em; margin-block: 0 24px; overflow-wrap: anywhere; }
+h2 { font-size: 1.3rem; line-height: 1.35; letter-spacing: -.015em; margin-block: 36px 12px; }
+p, ul, ol, dl { margin-block: 0 18px; }
+.lead { font-size: 1.15rem; line-height: 1.65; }
+section { border-top: 1px solid var(--border); margin-top: 32px; }
+dl { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
+dt { font-weight: 700; }
+dd { margin: 0 0 16px; }
+dd:last-child { margin-bottom: 0; }
+li { margin-bottom: 10px; }
+code { font-size: .87em; overflow-wrap: anywhere; }
+footer { border-top: 1px solid var(--border); padding-block: 24px; color: var(--muted); font-size: .9rem; }
+footer p { margin-block: 0 8px; }
+@media (max-width: 420px) {
+  .site-header, main, footer { padding-inline: 20px; }
+  main { padding-top: 36px; }
+  dl { padding: 16px; }
+}

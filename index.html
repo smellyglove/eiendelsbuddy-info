@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EiendelsBuddy er et privat, selvhostet eiendelsarkiv med kvitteringskontroll gjennom GoogleAPIApp.">
+  <title>EiendelsBuddy – personlig eiendelsarkiv</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-current="page">EiendelsBuddy</a>
+    <nav aria-label="Hovedmeny"><a href="personvern/">Personvern</a><a href="vilkar/">Bruksvilkår</a></nav>
+  </header>
+  <main id="innhold">
+    <p class="eyebrow">Personlig bruk · selvhostet</p>
+    <h1>Eiendelene dine.<br>Kvitteringene samlet.</h1>
+    <p class="lead">EiendelsBuddy er et privat eiendelsarkiv for å registrere ting du eier, ta vare på kvitteringer og holde oversikt over kjøpsdato, butikk og kjøpspris.</p>
+    <p>Appen kjøres på eierens egen datamaskin. Denne nettsiden beskriver appen og Google-tilkoblingen; den har ingen innlogging til eiendelsarkivet og viser ingen kvitteringer.</p>
+
+    <section aria-labelledby="google">
+      <h2 id="google">Hvorfor appen bruker Google</h2>
+      <p>Den lokale bakgrunnstjenesten GoogleAPIApp kobler appen til eierens Google-konto med OAuth. Tilkoblingen brukes til å finne kjøpsdokumentasjon og lese eksisterende arkiv- og kalenderopplysninger.</p>
+      <dl>
+        <dt>Gmail</dt><dd>Leser meldinger og PDF-vedlegg for å finne kvitteringer og annen kjøpsdokumentasjon.</dd>
+        <dt>Google Drive</dt><dd>Leser eksisterende kvitteringsarkiv og tidligere arkivmetadata. EiendelsBuddy kan også lese en lokalt synkronisert Drive-mappe.</dd>
+        <dt>Google Calendar</dt><dd>Leser kalenderlisten og kalenderhendelser for kalender- og tilkoblingskontroll.</dd>
+      </dl>
+      <p>Den nåværende API-tilkoblingen har bare lesetilgang. Den sender eller sletter ikke e-post og oppretter eller endrer ikke Drive-filer eller kalenderhendelser gjennom Google API-ene.</p>
+    </section>
+
+    <section aria-labelledby="vurdering">
+      <h2 id="vurdering">Fra dokument til eiendel</h2>
+      <ol>
+        <li>GoogleAPIApp henter meldinger og vedlegg og klargjør dokumenter for vurdering.</li>
+        <li>AI leser kildene og foreslår blant annet vare, butikk, kjøpsdato og pris. Valgt vurderingsflyt bruker ChatGPT fra OpenAI; lokal AI via Ollama finnes som alternativ.</li>
+        <li>Eieren kontrollerer forslagene og velger selv hvilke eiendeler som legges til.</li>
+      </ol>
+      <p>Med ChatGPT behandles kildedokumenter og nødvendig e-postinnhold også av OpenAI. Les <a href="personvern/">personvernerklæringen</a> for detaljer om tilgang, lagring og deling.</p>
+    </section>
+
+    <section aria-labelledby="kontakt">
+      <h2 id="kontakt">Om appen og kontakt</h2>
+      <p>EiendelsBuddy og GoogleAPIApp er personlige verktøy administrert av GitHub-brukeren <a href="https://github.com/smellyglove">smellyglove</a>. De tilbys ikke som en offentlig tjeneste og er ikke tilknyttet Google eller OpenAI.</p>
+      <p>Spørsmål om appen eller denne erklæringen kan sendes via <a href="https://github.com/smellyglove/eiendelsbuddy-info/issues">kontakt i GitHub</a>. Ikke legg personlige dokumenter eller innloggingsopplysninger i offentlige henvendelser.</p>
+    </section>
+  </main>
+  <footer><p>EiendelsBuddy · GoogleAPIApp</p><p><a href="personvern/">Personvernerklæring</a> · <a href="vilkar/">Bruksvilkår</a></p></footer>
+</body>
+</html>
